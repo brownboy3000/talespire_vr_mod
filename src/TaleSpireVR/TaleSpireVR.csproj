@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>TaleSpireVR</AssemblyName>
+    <RootNamespace>TaleSpireVR</RootNamespace>
+    <LangVersion>10</LangVersion>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DebugType>portable</DebugType>
+    <DefineConstants>$(DefineConstants);UNITY_5_3_OR_NEWER;UNITY_2021_3</DefineConstants>
+    <NoWarn>$(NoWarn);CS0618;CS0649;CS0169;CS0414;MSB3277</NoWarn>
+    <GameDir>$(MSBuildThisFileDirectory)..\..\..</GameDir>
+    <Managed>$(GameDir)\TaleSpire_Data\Managed</Managed>
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\build</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Unity engine modules and the game's own assemblies (never copied to output). -->
+    <Reference Include="$(Managed)\UnityEngine*.dll" Exclude="$(Managed)\UnityEngine.UI.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\UnityEngine.UI.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Unity.*.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Bouncyrock.*.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Bounce*.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Assembly-CSharp.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Cinemachine.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\ShapesRuntime.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Vuplex.WebView.Runtime.asmdef.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Photon3Unity3D.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\com.rlabrecque.steamworks.net.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\Newtonsoft.Json.dll"><Private>false</Private></Reference>
+    <Reference Include="$(Managed)\netstandard.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

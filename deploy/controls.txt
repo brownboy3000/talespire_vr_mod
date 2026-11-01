@@ -1,0 +1,627 @@
+TALESPIRE VR - CONTROLS
+=======================
+
+Start SteamVR first, then start TaleSpire. The buttons below are for Valve Index controllers;
+other controllers are listed under OTHER CONTROLLERS.
+
+VR MODE OR NORMAL MODE
+----------------------
+On the black bar along the bottom of TaleSpire's main menu, between the "Welcome" line (under
+Begin) and the Build-id in the bottom right corner, is a "VR MODE" button: click it to
+switch between VR and normal TaleSpire (the headset, or your monitor with mouse and keyboard).
+Your choice is saved: TaleSpire starts in that mode next time. In normal mode TaleSpire runs
+exactly as it does without the mod - that button is the only thing added. Switching to VR needs
+SteamVR running (if it isn't, the button says so and stays in normal mode).
+If VR ever won't start and you can't reach the button, open VRMod\TaleSpireVR.Core.ini in a text
+editor and set VR = false (or true) under [Mode].
+
+SETTINGS FILES (all directly in the VRMod folder, created the first time you start TaleSpire with
+the mod; each option is explained in the file. Edit them while TaleSpire is closed: they are read
+when it starts.)
+  TaleSpireVR.Core.ini .......... VR or normal mode at startup, render resolution, desktop window
+  TaleSpireVR.Controls.ini ...... the table view: starting scale, moving, zooming, turning, laser
+  TaleSpireVR.Menus.ini ......... the floating menus, the radial menu, the forearm dice
+  TaleSpireVR.Graphics.ini ...... draw distance, shadows, bloom, anti-aliasing
+  TaleSpireVR.StreamCamera.ini .. the stream window and held camera, or turn them off (STREAM VIEW)
+  TaleSpireVR.FirstPerson.ini ... first-person mode, hands and weapons
+What you pick in game for each creature (not settings): BepInEx\config\TaleSpireVR holds
+TaleSpireVR.Weapons.txt and TaleSpireVR.HandColors.txt.
+
+PLAYING TOGETHER
+----------------
+The mod works for the Game Master and for players. Everyone plays on their own TaleSpire through
+TaleSpire's own online play; nobody else needs the mod, and the mod itself never sends anything over
+the internet. What you do in VR - moving minis, attacks, dice, pings, rulers, first person walking -
+is done with TaleSpire's own actions, so every player sees it as usual. What only you (and your
+stream window) see: your hands and their colours, weapons and their flashes and sounds, the flame
+and ice powers, the dice results and turn order floating in the sky, the faster attack timing.
+As a player (not the Game Master) TaleSpire's rules for players apply, and also:
+  - Build Mode and the Build Grid are greyed out on the button row under the menu panel.
+  - First person, hand colours and weapons only for creatures TaleSpire lets you control.
+  - No Predator Vision, and no stream window or held camera.
+  - Cutscenes: when the Game Master shows one, it plays on a screen the size of the menu panel in
+    front of you, with "The Game Master is showing a cutscene" above it.
+
+POINTING
+--------
+Both controllers are laser pointers. Pull the trigger on whichever controller is pointing at
+the thing you want - that controller takes control.
+  Blue laser   = pointing at a menu.  A yellow ring on the menu shows exactly where you'll click.
+  Yellow laser = pointing at the board (tiles, props, creatures).
+A small dot marks where each laser touches something.
+Which laser is in control:
+  - Only pressing a button changes it: the trigger you pull, and A or the stick click always
+    use the RIGHT laser (they are on the right controller).
+  - Resting the other laser on the menu lights up the menu buttons under it, but never takes
+    the board away from the hand you are using (its trigger on the board still picks up).
+  - Whatever you carry or are placing (a creature, a group, a mini / prop / tile / slab taken
+    from a menu) stays with the hand that took it until you drop or place it; the other
+    hand's trigger on the board does nothing meanwhile.
+  - When you switch hands, or press on the board while the other laser rests on the menu, the
+    press waits about 1/10 of a second so TaleSpire can see what the laser points at
+    (otherwise the pickup would miss).
+
+
+RIGHT CONTROLLER
+----------------
+Trigger ............ Left mouse click.
+                     - On a menu: click buttons, lists, sliders (hold + move to drag/scroll).
+                     - On the board: click to select; HOLD on a creature to pick it up,
+                       move the laser to carry it, RELEASE to drop it (it falls to the
+                       floor below, just like the normal game). A held creature stays
+                       still and keeps facing the same way until you move or turn it.
+                     - In Build Mode: place / drag tiles and props.
+A .................. Right mouse click.
+                     - On a creature, door or other object: opens its radial menu. The menu
+                       appears as a floating window in front of you; point at an icon (it
+                       grows and shows its name) and pull the trigger.
+                     - With a radial menu open: A on another creature / object opens that
+                       one's menu instead; A on the same one, on the ground, or on the radial
+                       menu itself closes it.
+                     - Elsewhere: cancel / back out of the current tool.
+                     - The floating radial window only catches your laser on the menu itself
+                       (its ring of options with a small margin, its option lists, our extra
+                       buttons, and while one is open the whole hand-colour or weapons arc, or
+                       the Weapon Catalogue); just outside it your laser goes through to the
+                       board again.
+                     - A creature's menu has one extra teal button (an eye) ABOVE its ring of
+                       options: "First Person" - see through that creature's eyes (FIRST-PERSON
+                       MODE below). TaleSpire's own options stay where they always are.
+                     - A UNIQUE creature's menu also has a blue button with a hand: "Hand Colour"
+                       (HAND COLOURS under FIRST-PERSON MODE), and a red button with a crossed
+                       sword and staff: "Weapons" (WEAPONS under FIRST-PERSON MODE).
+                     Holding A never drags the board around (TaleSpire's right-drag camera
+                     move is off in VR - move with the sticks).
+                     A always works at once: a second A right after the first (closing a menu
+                     you just opened, or opening the next one) is never swallowed.
+B .................. Show / hide the big menu panel (it appears in front of you). With a radial
+                     menu open, B closes the radial menu and opens the panel. Opening a radial
+                     menu while the panel is up closes the panel (see MENUS below).
+                     On a board, opening it also opens TaleSpire's toolbars (what Space
+                     does: dice, hotbar, side menus) if they are closed.
+                     On the title screen and campaign/board lists the panel is always
+                     shown; pressing B brings it back in front of you.
+                     In first person: TaleSpire's ESC menu instead, on its own (see FIRST-PERSON
+                     MODE > ESC MENU).
+Thumbstick left/right  Turn 30 degrees (snap turn).
+                     While HOLDING a creature: turns the creature left/right instead
+                     (like Alt + mouse in the normal game).
+                     In first person: the same snap turn.
+Thumbstick up/down . Move your viewpoint UP / DOWN (same as Page Up / Page Down). Keep
+                     pushing down to reach the ground or dip below it (up to about 5 m).
+                     In first person: UP = jump, DOWN = crouch / stand; flying creatures fly up /
+                     down (see FIRST-PERSON MODE).
+                     While your laser is on the menu panel it SCROLLS the menu under the
+                     laser instead (lists, the library, side menus like Atmosphere).
+Thumbstick left/right  (On the menu panel: scrolls sideways lists such as the library grids -
+                     right = onward. Snap turning is off while your laser is on the menu.)
+Thumbstick click ... Middle mouse click (rotates the held tile/prop 90 degrees in Build Mode).
+                     While the stream view is HELD: start / stop its ORBIT around the point
+                     your right laser is on (see STREAM VIEW below).
+Trackpad press ..... Rotate modifier (same as holding Alt): while carrying a creature, a
+  (hold)             group or a prop, press and point - it turns to face where you point.
+                     While you carry a creature or a group, only the trackpads (and the zoom
+                     buttons) switch it between moving, turning and raising: a stray Alt / Ctrl
+                     on the real keyboard can no longer leave it stuck turning.
+                     Both trackpads together for 1 second: hold / release the stream view
+                     (see STREAM VIEW below; Game Master only).
+                     In first person: both trackpads held = PREDATOR VISION (see FIRST-PERSON MODE;
+                     Game Master only).
+Trackpad TAP ....... PING (TaleSpire's T): a quick press and release puts the animated red
+                     arrows where this laser points on the board, for everyone to see (on a
+                     creature they follow it). Drawn twice TaleSpire's size in VR.
+Grip + Trigger ..... LASSO: squeeze the grip firmly (laser and its dots turn purple), then pull and
+                     hold the trigger and sweep the laser around creatures on the board.
+                     Let go of the trigger - every creature inside the loop is selected.
+                     Pull the trigger alone on any selected creature to pick up the whole
+                     group; it moves together, without turning. Turn the group with the
+                     thumbstick (it turns around the creature you grabbed, keeping its
+                     formation); B / A on the left controller raise and lower it.
+                     Pull the trigger on empty board to deselect.
+
+
+LEFT CONTROLLER
+---------------
+Thumbstick ......... Move over the board (forward/back/left/right, relative to where
+                     you are looking). Zoomed in: always the starting speed. Zoomed out:
+                     faster the further out you are, so big maps stay quick to cross.
+Thumbstick click ... Toggle Build Mode. It always works: a slab, tile or prop still on your
+                     pointer is put down first (as A would), and a text box you were typing in
+                     (e.g. the library search) stops typing. (TaleSpire's own B key does
+                     nothing in either case, so the mod switches Build Mode directly.)
+                     In first person: show / hide the ruler instead.
+B (upper button) ... Zoom IN  - the board grows around the spot you are looking at.
+                     While HOLDING a creature: raises the creature instead
+                     (like Ctrl + mouse in the normal game).
+A (lower button) ... Zoom OUT - the board shrinks around the spot you are looking at.
+                     While HOLDING a creature: lowers the creature instead.
+Trigger ............ Left mouse click with the LEFT hand's laser.
+Trackpad press ..... Elevate modifier (same as holding Ctrl): while carrying a creature or
+  (hold)             prop, press and move the laser up/down to raise/lower it.
+                     Both trackpads together for 1 second: hold / release the stream view
+                     (Game Master only).
+Trackpad TAP ....... PING where the LEFT laser points (same as the right trackpad tap).
+Palm up ............ Turn the left wrist so the palm faces up (wherever you are looking): the DICE
+                     appear on your inner forearm (see DICE below).
+Grip + Trigger ..... MEASURE: squeeze the grip firmly (laser and its dots turn green), point where
+                     the measurement starts, pull and hold the trigger, move the laser,
+                     and let go of the trigger where it ends.
+                     Uses the ruler type you last picked in TaleSpire's ruler menu (open
+                     the menu with B once to choose line / circle / cone / box).
+                     - A cone needs its width too: after letting go, point and pull the
+                       trigger once more to set it.
+                     - The distance is shown as a label in the world next to the ruler.
+                     - The ruler stays up so you can read it, until your next press on the
+                       board: that press puts the ruler away and then works as usual (picks
+                       up the creature, opens the door...). A quick grip + trigger pull
+                       (without moving) also clears it.
+
+Grip + trigger only measures / lassos when the laser is on the board; on a menu it is a
+normal click. The grip on its own does nothing, and only a firm squeeze counts, so your
+normal hold on the controllers won't set it off. One squeeze = one measurement or lasso: to do
+another, let go of the grip and squeeze again. Until then the trigger is a normal click, even if
+you keep gripping firmly (the laser is only green / purple while a squeeze is ready to use).
+While carrying a creature the grips are ignored.
+
+
+DICE
+----
+OPEN ........... Turn your LEFT wrist counter-clockwise, palm towards up (about 35 degrees past the
+                 usual grip with palms facing each other - a bit over a third of the way to fully palm up;
+                 it hides again once you turn back to under about 17 degrees): TaleSpire's dice row appears
+                 on the inside of your forearm, lying along it (towards the wrist), as if strapped to it.
+                 It depends only on how the hand is turned around the forearm - not on where you look,
+                 nor on whether the forearm points level, up or down - and the palm has to
+                 stay up for a moment, so passing through while you point, place things or use menus
+                 doesn't show it. Turn the hand back and it disappears (it stays while the right laser
+                 is on it). Only on a board, not in first person, not while a radial menu is open or the
+                 left trigger is held. While it is out, the left laser is switched off (with your palm
+                 up it would point sideways across your view). Its size: DiceMenuWidth in
+                 TaleSpireVR.Menus.ini. (The dice in the big menu panel work the same way.)
+PICK DICE ...... Keep your left palm up and point the RIGHT laser at a die (d4 ... d100), pull the
+                 trigger, as in the normal game: each click adds one to the tray that rises above the row.
+TAKE THEM ...... Pull the trigger on the tray (the box holding your dice), or on its small GM button
+                 for a hidden GM roll. A click is enough: the dice appear right by your hand, a
+                 little way out along your pointer (about 15 cm), and stay there as you move it; the
+                 pointer is short while you hold them, ending at the dice. (Holding the trigger on the
+                 tray and dragging off it works too, like the normal game; the forearm dice and the
+                 dice in the big menu work the same.) The forearm dice and the big menu step aside
+                 while you hold dice; the forearm dice come back after the throw if your palm is still
+                 turned up.
+THROW .......... Pull and hold the trigger, swing your hand as if throwing real dice onto the board
+                 and let go: they fly off from your hand the way, and as fast as, they were moving
+                 (a still hand just drops them).
+CLEAN-UP ....... Your thrown dice leave the board by themselves 10 seconds after they land (TaleSpire's
+                 "Remove", so they are gone for everyone). Pick them up again (or throw them again)
+                 before that and the 10 seconds start over when they land again. Other players' dice
+                 are left alone.
+RESULTS ........ The result (who rolled, the dice, the total) floats in the sky in the direction you
+                 face, a little above the horizon: look slightly up to read it. It is the same size
+                 whatever your zoom, stays clear of the board below, shows on the stream view for your
+                 players too, and stays up 15 seconds (5 in the normal game). Only your own view
+                 changes: other players see TaleSpire's usual result, and the roll itself is
+                 TaleSpire's.
+TURNS .......... In turn-based mode, whenever the turn changes (or the lineup does), TaleSpire's own
+                 turn order bar (the portraits at the top of the normal game's screen) floats in the
+                 same place in the sky for 9 seconds, with whose turn it is above it ("Your turn"
+                 when it is one of your creatures', as a player). Messages such as "Not Goblin's
+                 turn" show there too. The turns are TaleSpire's; only where they are shown is ours.
+Dice are not available in first person.
+
+
+MENUS - HOW THEY FIT TOGETHER
+-----------------------------
+One menu at a time; the newest one wins, and closing a menu never opens another one:
+  - Opening a radial menu (A on a creature / object) while the big menu panel is up closes the panel.
+    Closing the radial does not bring the panel back - press B for it.
+  - B while a radial menu is open closes the radial and opens the panel. B again closes the panel - and
+    TaleSpire's ESC menu or settings window if you opened one in it (they don't stay floating on their own).
+  - The dice results in the sky are hidden while TaleSpire's ESC menu is open.
+  - A with a radial menu open: on another creature / object = that one's menu; on the same one,
+    the ground, or the radial menu itself = it closes.
+  - The hand-colour and weapons arcs are part of the radial menu they open from: they close with it, and
+    A on them closes the whole menu like A anywhere on a radial menu.
+  - The Weapon Catalogue (+ on the weapons arc) takes the radial menu's place: Return brings the menu back
+    with its weapons arc; A closes the catalogue and the menu together.
+  - The forearm dice are not a menu you open: they show while your left palm is turned up (not while a
+    radial menu is open). Dice in hand: the panel and the forearm dice step aside until the throw.
+  - In first person there is no panel: B is TaleSpire's ESC menu on its own, and A follows the first-person
+    rules (FIRST-PERSON MODE below). The same rules apply: a radial menu opening closes the ESC menu, B
+    with a radial menu open closes the radial and opens the ESC menu, and A or B closes the ESC menu
+    without opening anything else.
+
+
+VR KEYBOARD
+-----------
+Click any text box in the menus (library search, filters, names, join ID): a keyboard appears
+under the menu panel. Point at keys and pull the trigger - with either hand, or both hands
+taking turns like two fingers (each laser lights up its own key).
+  Shift  - next letter uppercase / symbol      Back  - delete (hold to repeat)
+  Clear  - empty the box                       Enter - run the search / submit, and close
+  Done   - close the keyboard
+It also closes when you click anything that is not a text box, or close the menu with B.
+Your physical keyboard keeps working too.
+
+
+FLOOR SLIDER (right edge of the big menu panel, on a board)
+-----------------------------------------------------------
+The thin vertical slider with pins: point at a pin, hold the trigger and drag up/down. The pins
+move at a third of your laser's speed so small changes are easy (FloorSliderSpeed in TaleSpireVR.Menus.ini).
+  Green pin (top by default) - view level / cut plane: hides everything above it.
+  Blue pin                   - water level.
+  Fog pin                    - fog level (only on boards that have fog).
+The camera-height pin is hidden: the right thumbstick does that in VR.
+(The slider is drawn bigger in VR; that enlargement holds still while you drag a pin, so the pin
+follows your laser smoothly however many menus you have opened and closed.)
+
+
+STREAM VIEW (for players watching on Discord / recording with OBS)
+-----------------------------------------------------------------
+A second window, "TaleSpire VR - Stream View", opens with the game. Share THAT window on
+Discord (or add it to OBS as a Window Capture). The picture is 16:9 at your monitor's resolution.
+It is a Game Master's tool: while you play as a player the window closes (and opens again when you
+are the Game Master). To turn the whole feature off (no window, no held camera), set Enabled = false
+under [StreamView] in VRMod\TaleSpireVR.StreamCamera.ini.
+On controllers without trackpads, "both trackpads" below means both grips pressed in.
+  Normally ....... it shows what you see in the headset (the left eye, like the game's window).
+  HOLD ........... press BOTH trackpads together and keep them pressed for 1 second (not while
+                   carrying a creature). The stream's viewpoint stays where your head is right
+                   now - same framing, horizon kept level - but it stays live: creatures you
+                   move, doors, lights and the view-level slider all show up in it. Walk around,
+                   zoom, fly, or take the headset off: the players' view does not move.
+  RELEASE ........ both trackpads for 1 second again: the stream camera flies smoothly back to
+                   your eyes (over a gentle arc, at about half your top stick speed, never longer
+                   than 3 seconds), then follows your headset again - no sudden cut for the
+                   players. Holding again during the flight holds wherever you are now.
+                   Leaving or switching boards releases it at once.
+  ORBIT .......... while held, point your RIGHT laser at a spot on the board and click the right
+                   thumbstick: the stream camera circles that spot at its current height,
+                   slowly (a sixteenth of your top stick speed), always facing it so it stays
+                   in the middle of the picture - a moving bird's-eye view of the battle map.
+                   The spot is exactly where your laser's dot is: on top of a hill, a slab, a
+                   wall or a creature (the camera tilts to keep that height centred); where
+                   the laser hits nothing, the ground. A small green ring marks the spot in
+                   your headset. Click the thumbstick again to stop (the view stays where it
+                   is). To circle another spot: stop, point at the new spot, click again.
+                   (While carrying or placing something the click still rotates it instead.)
+  Bird's-eye view for the players: move up high (right stick up, or zoom out), look down at
+  the board, hold, then come back down close to the minis to play.
+  FIRST PERSON ... while you are in first-person mode the stream always shows your first-person
+                   view. A held view (and its orbit) waits, paused, and comes back exactly as it
+                   was when you leave first person. The two-trackpad hold does nothing meanwhile.
+
+While held you see (in the headset only, never on the stream) a green wireframe movie camera
+where the view is held, pointing where it looks, and four green lines along the edges of its
+view. They frame a little LESS than the stream really shows: 10% in from each edge of the
+picture (top, bottom, left and right), so anything you keep inside them stays clear of whatever
+your players' stream windows put around the edges. Each line ends where that framed corner meets
+the board's ground floor (level 0 - the dirt layer, the lowest level minis stand on), and a
+green outline on that floor marks the framed area. If the view is tilted down only a little, its
+top corners see sky, not floor: those two lines end at the stream's draw distance and the
+outline's far edge follows it. Your own draw distance cuts the lines like everything else. The
+camera icon appears once you move away from the spot where you held it, and keeps a readable size
+however far away it is. How far in the frame is drawn: HeldViewFrameInset in
+TaleSpireVR.StreamCamera.ini (0.1 = 10%; 0 = the exact edges).
+
+The stream window: double-click it (or press F11 while it is focused) for borderless fullscreen
+at full resolution; double-click or Esc to go back. Drag its edges to resize - it stays 16:9.
+Don't minimize it (Windows stops drawing minimized windows, so the stream would go black). If
+you close it, holding the view again reopens it. To record both views in OBS, add one Window
+Capture of the Stream View and one of TaleSpire's own window.
+
+Frame rate: the held view runs at 30 fps (HeldViewFps). Each of its frames draws everything it
+sees again from its own viewpoint - even things you are also looking at - so it costs headset
+frame rate in proportion to how busy its view is. Light boards don't notice; on a very big board
+your headset can lose around a fifth of its frame rate while the view is held (a bit less with
+HeldViewFps = 20). Following your headset costs nothing noticeable.
+Stream settings (frame rates, field of view, how far the held camera sees, the green marker)
+are in TaleSpireVR.StreamCamera.ini.
+
+
+FIRST-PERSON MODE (see the board through a creature's eyes)
+-----------------------------------------------------------
+ENTER .......... A on a creature to open its radial menu, then the teal eye button above the ring
+                 ("First Person"). The view blinks (darkness slides in from the sky and the ground
+                 and back out, one second) and you are standing where the creature stands, at its
+                 size: your real eye height becomes the creature's eye height (from its model's
+                 height), and you face the way it faces. You have light brown hands that follow
+                 your fingers (Valve Index finger tracking: each finger as you hold it; other
+                 controllers: the trigger curls the index finger and the grip the other three,
+                 and the thumb follows what the hand does - resting on a button or stick, along
+                 the fingers when pointing, wrapped in a fist, open while you cast a power).
+                 Only creatures TaleSpire lets you control (a Game Master: any; a player: their own).
+  OTHERS SEE ... your creature walks with you on everyone's board, live (TaleSpire's own moving-mini
+                 display), and is put down for real whenever you stop walking for a second and when
+                 you leave. Your attacks start from where you are.
+  NOT ITS TURN . in turn-based mode you can be a creature whose turn it isn't and look around, but
+                 not walk, jump or attack with it ("Not <name>'s turn" shows in the sky if you try);
+                 it can move again as soon as its turn comes. The same during a cutscene.
+YOUR CREATURE .. Hidden, but it goes everywhere with you, facing where you look, and it is the
+                 selected creature the whole time (you can't select another one until you leave).
+                 So its attacks and emotes start where you stand: open another creature's menu
+                 (A on it) > Attacks, and the attack flies from you to it.
+MOVE ........... Left stick: walk forward / back / sideways (where you look), 2 grid squares per
+                 second. Real steps in your play space move you too. Creatures never block you;
+                 walls, tiles and props do. You go through doorways and under arches and fall off
+                 edges. Small bumps you just walk over; walk into a ledge up to 2 squares high and
+                 you climb onto it (a short climb: up first, then over the edge, so your eyes
+                 never pass through the floor above).
+TURN ........... Right stick left / right: the same turning as outside first person (30 degree snap
+                 turns by default; smooth if SmoothTurn is on in TaleSpireVR.Controls.ini).
+JUMP ........... Right stick UP (push and let go): a split-second crouch, then a gentle jump that clears
+                 about 2.5 squares. Jump while walking into a ledge: once it is within climbing
+                 reach you climb onto it and keep walking - so a ledge up to 4.5 squares above your
+                 floor (2.5 jump + 2 climb) can be reached.
+CROUCH ......... Right stick DOWN: crouch to 2/3 of your height ("sneak"; your view darkens strongly
+                 around the edges while you crouch); push down again to stand (only if there is room
+                 above).
+                 (Jump and crouch are on the right stick because the left stick is busy walking.)
+STATUS EFFECTS . Your creature's status effects (Frozen, Burning, Holy, Confused...) play around your
+                 invisible body as they would around the mini: ice at your feet, auras around you.
+                 Look down or around to see them. The parts that would be right in front of your
+                 eyes are cut away so your view ahead stays clear (an effect that surrounds the head
+                 is hidden while it surrounds your eyes).
+FLYING ......... If the creature is flying (also if you switch Flying on from its menu while you are
+                 it), right stick up / down flies up / down instead, with no gravity; switch
+                 Flying off and you drop to the floor.
+POINTING ....... Your lasers work exactly as always, they are just not drawn: squeeze a grip to see
+                 that hand's (white) laser, and both show while any radial menu or the ESC menu (B) is open.
+                 The TRIGGER does nothing on the board (no picking up or selecting other creatures,
+                 no dice); it clicks menu options. Holding a weapon, the RIGHT trigger uses it when
+                 that laser is not on a menu (WEAPONS below).
+RADIAL MENUS ... A uses the laser you can see:
+                 - No grip squeezed and no radial menu open (lasers hidden): A opens the menu of the
+                   creature you are, wherever you happen to point.
+                 - A grip squeezed (that hand's laser shows; the right one if both): A on another
+                   creature, or on a door or chest, opens its menu (replacing an open one); A
+                   anywhere else opens the menu of the creature you are, or closes an open menu.
+                 - A radial menu open (both lasers show; A uses the right one unless only the left
+                   grip is squeezed): A on another creature / door / chest opens its menu instead;
+                   A on the menu itself, the floor or the sky closes it; A on the creature whose
+                   menu is open keeps it open.
+                 The name of the creature or object whose menu it is is written in the middle of the
+                 ring (in TaleSpire's menu font; long names shrink and wrap to fit inside the ring).
+                 Every radial menu has an extra teal button above the ring: "Exit First Person"
+                 (and unique creatures' menus the blue "Hand Colour" and red "Weapons" buttons next
+                 to it).
+PREDATOR VISION  (Game Master only.) Hold BOTH trackpads (press them in, like clicking them, and keep
+                 holding; on controllers without trackpads, press in both grips and hold them for
+                 about half a second): the
+                 world goes almost grey and dark, while every creature you can see keeps its full
+                 colour and gets a hazy blood-red glow around it - handy to show the players where
+                 everyone is. Let go and it fades back. It is not X-ray vision: walls and anything
+                 else in front still hide creatures. The stream view shows it too. (In first person
+                 the trackpads do nothing else, apart from a quick single tap still pinging.)
+HAND COLOURS ... A unique creature can have hands of its own colour while you are it. Open its radial
+                 menu (in first person or not, yours or another creature's you control) and pull the
+                 trigger on the blue hand button above the ring: an arc of colours opens above the menu -
+                 Default (HandColor in TaleSpireVR.FirstPerson.ini), seven skin tones (Porcelain, Fair, Beige,
+                 Tan, Bronze, Brown, Deep Brown), Pale Red, Purple, Light Black, Orc Green and Bone
+                 White. Point at one (its name shows) and pull the trigger; the creature's current
+                 colour has a bright ring. If you are that creature, your hands change at once. The
+                 hand button again closes the arc; A anywhere on the menu closes the whole menu.
+                 Saved on this computer (BepInEx\config\TaleSpireVR\TaleSpireVR.HandColors.txt, per
+                 campaign) and only seen by you: TaleSpire's cloud has no place for it except the
+                 creature's name or link, which every player sees. If the creature stops being unique,
+                 its colour is forgotten.
+WEAPONS ........ A unique creature can carry weapons into first person. On its radial menu (in first
+                 person or not; only creatures you control have the button), the red button with a
+                 crossed sword and staff ("Weapons") opens an
+                 arc above the menu: Unarmed at the left end, then the weapons added to this creature,
+                 then + at the right end (more than about ten continue on a second arc outside the
+                 first, more than 24 on a third, with slightly smaller buttons). The one it holds has a
+                 bright ring. Pull the trigger on one
+                 to hold it (Unarmed: nothing in the hand): in your right hand at once if you are that
+                 creature, otherwise the next time you become it. New creatures start with none.
+  CATALOGUE .... + opens the Weapon Catalogue where the radial menu was: a grid of dark squares, each with
+                 a picture of the weapon and its name:
+                   guns ...... Shotgun, Combat Shotgun, Pistol, Uzi, Assault Rifle, Machine Gun, Sniper
+                               Rifle, Rocket Launcher, Musket, Injector (sci-fi)
+                   ranged .... Bow, Magic Wand, Fire Staff
+                   melee ..... Longsword, Scimitar, Battle Axe, Hand Axe, Fire Axe, War Hammer,
+                               Sledgehammer, Morning Star, Spiked Bat, Spear, Halberd, Glaive, Scythe,
+                               Dagger, Knife, Machete, Crowbar, Shield, Kite Shield
+                   powers .... Flame, Ice
+                 Trigger on one adds it to this creature (it gets a
+                 green tick); trigger on a ticked one takes it away again. Return (top left) brings back
+                 the radial menu with its weapons arc; A closes the catalogue and the menu together.
+                 It works the same in first person and at the table. Saved on this computer
+                 (BepInEx\config\TaleSpireVR\TaleSpireVR.Weapons.txt, per campaign), like hand colours;
+                 forgotten if the creature stops being unique. Only you see the weapons in your hand.
+  HOLDING ...... A gun or melee weapon takes the place of your right hand: the hand (and arm) isn't
+                 drawn, just the weapon, sitting where your real hand would hold it and moving with it:
+                 guns by their pistol grip (the rocket launcher by its trigger grip, the musket by the
+                 wrist of its stock), barrel forward; the bow upright by its grip, an arrow's way
+                 forward; the magic wand along your hand like a short stick, tip forward; the fire staff
+                 upright, its crystal at the top; melee weapons by the handle, head or blade up and
+                 forward (the axes' edges and the hammers' faces forward; spears and polearms by the
+                 shaft, held low); the shields by the handle on their back, the face forward, guarding
+                 you rather than pointing like a blade. All lean a little forward -
+                 top / tip away from you - so the handle sits at the same angle as the controller's in
+                 your hand (on other controllers than the Index the lean follows that controller's own
+                 pointing direction).
+                 Unarmed or with a power (Flame, Ice) your right hand is back, fingers tracked as usual.
+                 The right laser (grip squeezed, or any radial menu open) is in line with the weapon and
+                 is only drawn beyond it: out of a gun's barrel, out of a melee weapon's tip or head (it
+                 really starts near your hand, so a menu closer than the tip can still be pointed at -
+                 you see just its dot there), out of the front of the bow where the arrow would fly,
+                 out of the wand's tip and the staff's crystal, out of the middle of the shield. Grips,
+                 radial menus and A
+                 work as usual, and the right trigger on a menu still clicks it.
+  RIGHT TRIGGER  (laser not on a menu) uses the weapon:
+    Guns ....... one shot per trigger pull (machine guns too): a quick blast of fire out of that gun's
+                 own muzzle with a bang. With the right laser showing (grip squeezed) on another
+                 creature, that creature is also attacked with TaleSpire's red attack (Red Laser, as
+                 from its radial menu > Attacks) - everyone sees that. The Injector is a sci-fi gun:
+                 its attack is the green one (Green Laser). On your screen and the stream the laser
+                 leaves at once and strikes about a fifth of a second after the shot: TaleSpire's
+                 wait before its laser leaves (almost half a second) is skipped. Other players see
+                 TaleSpire's usual attack.
+    Bow ........ one arrow per trigger pull: no flash, the string's twang, and with the right laser
+                 on another creature TaleSpire's green attack (Green Laser) - quick on your screen,
+                 as with the guns.
+    Magic Wand . a purple flash at the wand's tip with a magic zap; on a creature, TaleSpire's
+                 Magic Missile attack.
+    Fire Staff . a burst of fire out of the crystal, the way your hand points, with a whoosh; on a
+                 creature, TaleSpire's Magic Missile attack.
+    Melee ...... (Longsword, Scimitar, Battle Axe, Hand Axe, Fire Axe, War Hammer, Sledgehammer,
+                 Morning Star, Spiked Bat, Spear, Halberd, Glaive, Scythe, Dagger, Knife, Machete,
+                 Crowbar, Shield, Kite Shield)
+                 hold the trigger and bring the weapon into another creature (a tenth of its blade,
+                 shaft or head inside it is enough; the axes and hammers strike with the head as well
+                 as the shaft, the shields with their face): it is struck once - TaleSpire's Hit attack (as
+                 from its radial menu > Attacks > Hit; everyone sees it) with a hit sound. On your
+                 screen and the stream it lands at once: TaleSpire's run-up for it (almost a second) is
+                 skipped, and its own swing and thud sounds are left out, so each hit makes one sound.
+                 Other players see TaleSpire's usual Hit, landing about a second later.
+                 Keeping the weapon in it does nothing more: pull it out of the creature completely and
+                 strike again (or strike another creature) for the next hit, at least 0.4 seconds
+                 later (a weapon grazing a creature's edge counts once). No laser needed.
+    Flame ...... nothing in your hand. Hold the trigger: a bright fiery sigil appears at once in front
+                 of your right palm, already about palm-sized, facing the way the palm faces, slowly
+                 turning and lighting your hand orange; a line of fire runs along the floor from below
+                 your hand in the direction your right PALM faces (palm flat down: along your fingers).
+                 Over 2 seconds the line grows to 7 squares long and half a square wide while the sigil
+                 grows (most of it early on, to about the length of your hand) and moves a little away
+                 from the palm. It sounds like it: a whoosh as it catches, then a roaring, crackling
+                 fire from your hand that grows louder with the flame (TaleSpire's sound-effects
+                 volume applies). Each flame stays where it lit: sweep the palm and new flames light where
+                 the line now is while the old ones die down where they are. Let go and all of it dies
+                 down at once, the sigil shrinking away and the roar fading. Creatures in the burning line burn (TaleSpire's
+                 Burning look) for 5 seconds - on this computer and the stream only; nothing is changed
+                 on the board or for other players.
+    Ice ........ works the same way as the Flame, in ice: the sigil is icy blue-white and lights your
+                 hand pale blue, ice crystals grow along the floor instead of flames (each stays where it
+                 formed, and they melt away when you let go), creatures in the line are frozen
+                 (TaleSpire's Frozen look) for 5 seconds - again on this computer and the stream only -
+                 and it sounds cold: a frosty rush as it starts, then an icy hiss with tinkling
+                 crystals and cracking ice.
+                 Which TaleSpire attack the guns and the melee weapons play: ShotgunAttack / SwordAttack
+                 in TaleSpireVR.FirstPerson.ini (the Injector and the bow are always green, the
+                 wand and the staff always Magic Missile).
+    WHO ........ Weapons, flame and ice only reach creatures you can see: not ones the Game Master
+                 has hidden (not even for the Game Master) or ones out of your sight. Attacks need the
+                 creature you are to be able to act: as a player, only on its turn in turn-based mode
+                 and not during a cutscene ("Not <name>'s turn" shows in the sky otherwise).
+EXIT ...........Point at "Exit First Person" and pull the trigger. The view blinks back to your
+                 table view, moved along by however far the creature went. The creature is dropped
+                 where you stood, facing where you were looking (a normal move: everyone sees it).
+RULER .......... Left stick CLICK (with the stick at rest - a click while walking doesn't count):
+                 show / hide a line ruler on the ground from where you entered first person to
+                 where you are now. It is HIDDEN each time you enter. On the back of your left hand
+                 (raise it like checking a watch) a blue dotted dial always shows the distance in
+                 the campaign's units; the dial turns like a tape measure's spool - clockwise while
+                 you move away from your starting point, back the other way as you come back.
+                 It starts again from zero each time you enter first person.
+ESC MENU ....... B opens TaleSpire's ESC menu (Resume, Settings, Exit to Main Menu, Exit to Desktop)
+                 in front of you, all by itself: nothing else of TaleSpire's menus is shown or can be
+                 clicked, so no board settings, slabs or creatures by accident. Both lasers show while
+                 it is open. Settings opens TaleSpire's settings window (graphics and the rest) the same
+                 way, and the Main Menu / Desktop buttons ask Yes / No as usual. B again, A, or the
+                 menu's own Resume / close buttons put it away.
+NOT AVAILABLE .. The big menu panel, TaleSpire's toolbars and dice (hidden while you are a creature,
+                 back when you leave), Build Mode, zoom, measure / lasso, and the stream view's hold /
+                 orbit.
+Settings (walking speed, step height, jump height, gravity, eye height, how far you can see, hand
+colour, the weapons' attacks) are in TaleSpireVR.FirstPerson.ini. Heights and speeds are in board squares; for
+scale, a human mini is about 1.15 squares tall.
+
+Black flickers at the edge of view on very busy boards come from the headset filling in frames when
+the game can't keep up, in first person and at the table alike (TaleSpire's own per-frame work, not
+the mod's first person). SteamVR's Motion Smoothing setting (on or off) changes how those filled-in
+frames look.
+
+
+HOTKEY BUTTONS (row under the big menu panel, on a board)
+---------------------------------------------------------
+Point and pull the trigger:
+  Menus (Space)  - opens TaleSpire's side menus (creature & asset libraries, etc.)
+  Build Mode (B) - toggle Build Mode (lit while on), like the left thumbstick click: it always works
+                   (Game Master only: greyed out for players, like Build Grid)
+  Undo / Redo    - Ctrl+Z / Ctrl+Y
+  Copy / Paste   - Ctrl+C / Ctrl+V (slabs)
+  Delete         - delete the selection
+  Shift (hold)   - latches Shift on/off (slide modifier in Build Mode); lit while on.
+                   Remember to turn it off again.
+  Build Grid     - TaleSpire's build grid on/off (lit while on). It only exists in Build
+                   Mode, so this switches Build Mode on first (the same reliable way as the
+                   left thumbstick click). The grid is drawn at the build
+                   height around your laser; move it with the build pin on the floor slider.
+  Cut Box (N)    - TaleSpire's cut box on/off (lit while on)
+  Esc            - Escape (close menus / back)
+  Reset View     - back to the default zoom, standing at the camera focus point
+
+
+TIPS
+----
+- Your real-world steps move you around the board too; use the left stick, right stick
+  and zoom buttons to cover big maps from a small play space.
+- Your physical keyboard and mouse still work if you need to type (chat, names, search).
+- A flashing red "!" in the very top-left corner of the menu is TaleSpire's own error console
+  (it lights up when the game logs an error); clicking it opens the console with the details.
+- Menu text sharpness: MenuSharpness in TaleSpireVR.Menus.ini (0 = soft, 1 = sharpest).
+- Menu size: MenuScale in the same file (1.2 = 20% bigger than the flat game; try 1.3 or 1.4
+  for even bigger buttons - bigger menus show a little less at once). SidePanelScale makes the
+  left-hand buttons, the top-right buttons (unique creatures, chat), the menus they open, and
+  the right-hand floor slider, bigger still
+  (1.5 = another 50%). Long menus such as Atmosphere then need a little scrolling.
+- Frame rate: zooming in draws less of the board and fewer shadows, so it runs faster.
+  On very busy boards, turning off "Reflections" in TaleSpire's graphics settings gains
+  a few more fps. The mod's own speed settings (draw distance, shadow distance,
+  how many torches cast shadows) are in TaleSpireVR.Graphics.ini.
+- All settings are in the .ini files directly in the VRMod folder (SETTINGS FILES at the top of
+  this file; edit while the game is closed). The mod never touches TaleSpire's own settings files.
+- To play TaleSpire flat, click the VR MODE button on the main menu (see the top of this file).
+- You can remap any of these in SteamVR: Settings > Controllers > Manage Controller
+  Bindings > TaleSpire. The default binding is "TaleSpire VR - Valve Index controllers
+  defaults"; if you made your own binding before, switch back to the default (or add the new
+  actions - finger skeletons, trigger / grip pull, thumb rest - to yours).
+
+
+OTHER CONTROLLERS
+-----------------
+The mod ships SteamVR default bindings for these controllers too; SteamVR picks the right one by
+itself when you start the game. Remap anything in SteamVR's Controller Bindings screen (as above),
+like any SteamVR game. Your hands' fingers follow the trigger and grip (only the Index tracks each
+finger), and the mod adjusts how hands and weapons sit for each controller type.
+  Meta Touch / Pico / Vive Focus 3 / HP Reverb G2 / Vive Cosmos (thumbsticks, no trackpads):
+    A / B (right) and X / Y (left) .. as the Index's A / B (Y = zoom in, X = zoom out)
+    sticks and stick clicks ........ as on the Index
+    grip squeezed all the way ...... the firm grip squeeze (measure / lasso)
+    grip pressed (half way) ........ the trackpad press: turn / raise while carrying, both for
+                                     a second = stream view hold (GM), quick tap = ping;
+                                     both held about half a second in first person = Predator
+                                     Vision (GM). On the Vive Cosmos the bumpers do this instead.
+  Vive wands (one trackpad, menu button, grip button):
+    trackpad touch + slide ......... the sticks (left = move, right = turn / up-down)
+    left pad press up / down ....... zoom in / out;   left pad centre press = left trackpad press
+    right pad press up / down ...... A (menus) / stick click;  right pad centre = right trackpad press
+    menu buttons ................... left = Build Mode, right = B (menu)
+    grip buttons ................... measure (left) / lasso (right)
+  Windows Mixed Reality (stick + trackpad):
+    sticks ......................... as on the Index
+    left pad press up / down ....... zoom in / out;   left pad centre press = left trackpad press
+    right pad press up ............. A (menus);       right pad centre press = right trackpad press
+    menu buttons ................... right = B (menu), left = A
+    grip buttons ................... measure (left) / lasso (right)
+These were made from each controller's SteamVR layout but only tested on Valve Index controllers.

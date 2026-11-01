@@ -1,0 +1,35 @@
+# This folder (VRMod) is the repository root. Never put a repository at the game folder above it.
+
+# Test output from one machine: snapshots, logs, command files
+/_debug/
+*.log
+
+# Decompiled TaleSpire code: Bouncyrock's, never published
+/_decompiled/
+
+# Build output and release zips
+/build/
+/release/
+/src/TaleSpireVR/bin/
+/src/TaleSpireVR/obj/
+*.pdb
+
+# Your own settings: the mod writes these on the first start
+/TaleSpireVR.*.ini
+
+# Asset Store content (models, textures): only inside release zips, never as loose files in the repository
+/deploy/BepInEx/plugins/TaleSpireVR/weapons.bin
+/deploy/BepInEx/plugins/TaleSpireVR/vrhands.bin
+/deploy/BepInEx/plugins/TaleSpireVR/sigil_*.png
+
+# The local .NET SDK, decompiler and package cache
+/tools/dotnet/
+/tools/home/
+/tools/ilspy/
+/tools/installer/
+/tools/nuget/
+
+# Editors and tools
+.claude/
+.vs/
+.vscode/

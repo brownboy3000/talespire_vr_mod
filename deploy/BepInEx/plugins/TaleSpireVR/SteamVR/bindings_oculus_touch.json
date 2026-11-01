@@ -1,0 +1,225 @@
+﻿{
+    "action_manifest_version":  0,
+    "alias_info":  {
+
+                   },
+    "bindings":  {
+                     "/actions/talespire":  {
+                                                "chords":  [
+
+                                                           ],
+                                                "haptics":  [
+                                                                {
+                                                                    "path":  "/user/hand/left/output/haptic",
+                                                                    "output":  "/actions/talespire/out/haptic"
+                                                                },
+                                                                {
+                                                                    "path":  "/user/hand/right/output/haptic",
+                                                                    "output":  "/actions/talespire/out/haptic"
+                                                                }
+                                                            ],
+                                                "poses":  [
+                                                              {
+                                                                  "path":  "/user/hand/left/pose/tip",
+                                                                  "output":  "/actions/talespire/in/poseleft"
+                                                              },
+                                                              {
+                                                                  "path":  "/user/hand/right/pose/tip",
+                                                                  "output":  "/actions/talespire/in/poseright"
+                                                              }
+                                                          ],
+                                                "skeleton":  [
+                                                                 {
+                                                                     "path":  "/user/hand/left/input/skeleton/left",
+                                                                     "output":  "/actions/talespire/in/skeletonleft"
+                                                                 },
+                                                                 {
+                                                                     "path":  "/user/hand/right/input/skeleton/right",
+                                                                     "output":  "/actions/talespire/in/skeletonright"
+                                                                 }
+                                                             ],
+                                                "sources":  [
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/triggerleft"
+                                                                                             },
+                                                                                   "pull":  {
+                                                                                                "output":  "/actions/talespire/in/triggervalue"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "trigger",
+                                                                    "path":  "/user/hand/left/input/trigger"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/triggerright"
+                                                                                             },
+                                                                                   "pull":  {
+                                                                                                "output":  "/actions/talespire/in/triggervalue"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "trigger",
+                                                                    "path":  "/user/hand/right/input/trigger"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/rightclick"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/right/input/a"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/menutoggle"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/right/input/b"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/zoomout"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/left/input/x"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/zoomin"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/left/input/y"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "position":  {
+                                                                                                    "output":  "/actions/talespire/in/move"
+                                                                                                },
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/buildmodetoggle"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "joystick",
+                                                                    "path":  "/user/hand/left/input/joystick"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "position":  {
+                                                                                                    "output":  "/actions/talespire/in/turnheight"
+                                                                                                },
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/middleclick"
+                                                                                             },
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "joystick",
+                                                                    "path":  "/user/hand/right/input/joystick"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "grab":  {
+                                                                                                "output":  "/actions/talespire/in/measure"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "grab",
+                                                                    "parameters":  {
+                                                                                       "value_release_threshold":  "0.8",
+                                                                                       "value_hold_threshold":  "0.9"
+                                                                                   },
+                                                                    "path":  "/user/hand/left/input/grip"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "grab":  {
+                                                                                                "output":  "/actions/talespire/in/lasso"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "grab",
+                                                                    "parameters":  {
+                                                                                       "value_release_threshold":  "0.8",
+                                                                                       "value_hold_threshold":  "0.9"
+                                                                                   },
+                                                                    "path":  "/user/hand/right/input/grip"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/left/input/thumbrest"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "touch":  {
+                                                                                                 "output":  "/actions/talespire/in/thumbrest"
+                                                                                             }
+                                                                               },
+                                                                    "mode":  "button",
+                                                                    "path":  "/user/hand/right/input/thumbrest"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/elevatemodifier"
+                                                                                             },
+                                                                                   "pull":  {
+                                                                                                "output":  "/actions/talespire/in/gripvalue"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "trigger",
+                                                                    "path":  "/user/hand/left/input/grip"
+                                                                },
+                                                                {
+                                                                    "inputs":  {
+                                                                                   "click":  {
+                                                                                                 "output":  "/actions/talespire/in/rotatemodifier"
+                                                                                             },
+                                                                                   "pull":  {
+                                                                                                "output":  "/actions/talespire/in/gripvalue"
+                                                                                            }
+                                                                               },
+                                                                    "mode":  "trigger",
+                                                                    "path":  "/user/hand/right/input/grip"
+                                                                }
+                                                            ]
+                                            }
+                 },
+    "category":  "steamvr_input",
+    "controller_type":  "oculus_touch",
+    "description":  "Default TaleSpire VR bindings for Meta Touch controllers",
+    "name":  "TaleSpire VR - Meta Touch controllers defaults",
+    "options":  {
+
+                },
+    "simulated_actions":  [
+
+                          ]
+}

@@ -1,0 +1,67 @@
+﻿{
+  "actions": [
+    { "name": "/actions/talespire/in/PoseLeft", "type": "pose" },
+    { "name": "/actions/talespire/in/PoseRight", "type": "pose" },
+    { "name": "/actions/talespire/in/TriggerLeft", "type": "boolean" },
+    { "name": "/actions/talespire/in/TriggerRight", "type": "boolean" },
+    { "name": "/actions/talespire/in/RightClick", "type": "boolean" },
+    { "name": "/actions/talespire/in/MenuToggle", "type": "boolean" },
+    { "name": "/actions/talespire/in/ZoomIn", "type": "boolean" },
+    { "name": "/actions/talespire/in/ZoomOut", "type": "boolean" },
+    { "name": "/actions/talespire/in/Move", "type": "vector2" },
+    { "name": "/actions/talespire/in/TurnHeight", "type": "vector2" },
+    { "name": "/actions/talespire/in/MiddleClick", "type": "boolean" },
+    { "name": "/actions/talespire/in/BuildModeToggle", "type": "boolean" },
+    { "name": "/actions/talespire/in/RotateModifier", "type": "boolean" },
+    { "name": "/actions/talespire/in/ElevateModifier", "type": "boolean" },
+    { "name": "/actions/talespire/in/Measure", "type": "boolean" },
+    { "name": "/actions/talespire/in/Lasso", "type": "boolean" },
+    { "name": "/actions/talespire/in/TriggerValue", "type": "vector1" },
+    { "name": "/actions/talespire/in/GripValue", "type": "vector1" },
+    { "name": "/actions/talespire/in/ThumbRest", "type": "boolean" },
+    { "name": "/actions/talespire/in/SkeletonLeft", "type": "skeleton", "skeleton": "/skeleton/hand/left" },
+    { "name": "/actions/talespire/in/SkeletonRight", "type": "skeleton", "skeleton": "/skeleton/hand/right" },
+    { "name": "/actions/talespire/out/Haptic", "type": "vibration" }
+  ],
+  "action_sets": [
+    { "name": "/actions/talespire", "usage": "single" }
+  ],
+  "default_bindings": [
+    { "controller_type": "knuckles", "binding_url": "bindings_knuckles.json" },
+    { "controller_type": "oculus_touch", "binding_url": "bindings_oculus_touch.json" },
+    { "controller_type": "pico_controller", "binding_url": "bindings_pico_controller.json" },
+    { "controller_type": "vive_focus3_controller", "binding_url": "bindings_vive_focus3_controller.json" },
+    { "controller_type": "hpmotioncontroller", "binding_url": "bindings_hpmotioncontroller.json" },
+    { "controller_type": "vive_cosmos_controller", "binding_url": "bindings_vive_cosmos_controller.json" },
+    { "controller_type": "vive_controller", "binding_url": "bindings_vive_controller.json" },
+    { "controller_type": "holographic_controller", "binding_url": "bindings_holographic_controller.json" }
+  ],
+  "localization": [
+    {
+      "language_tag": "en_US",
+      "/actions/talespire": "TaleSpire VR",
+      "/actions/talespire/in/PoseLeft": "Left hand pointer",
+      "/actions/talespire/in/PoseRight": "Right hand pointer",
+      "/actions/talespire/in/TriggerLeft": "Left click / pick up (left hand)",
+      "/actions/talespire/in/TriggerRight": "Left click / pick up (right hand)",
+      "/actions/talespire/in/RightClick": "Right click (creature/door menu, cancel)",
+      "/actions/talespire/in/MenuToggle": "Show / hide menu panel",
+      "/actions/talespire/in/ZoomIn": "Zoom in (board grows)",
+      "/actions/talespire/in/ZoomOut": "Zoom out (board shrinks)",
+      "/actions/talespire/in/Move": "Move over the board",
+      "/actions/talespire/in/TurnHeight": "Turn (left/right) and camera up/down",
+      "/actions/talespire/in/MiddleClick": "Middle click (rotate 90 in build mode)",
+      "/actions/talespire/in/BuildModeToggle": "Toggle Build Mode (B)",
+      "/actions/talespire/in/RotateModifier": "Rotate modifier (Alt)",
+      "/actions/talespire/in/ElevateModifier": "Elevate modifier (Ctrl)",
+      "/actions/talespire/in/Measure": "Measure modifier (hold, then pull that hand's trigger and drag to measure)",
+      "/actions/talespire/in/Lasso": "Lasso modifier (hold, then pull that hand's trigger and sweep around creatures)",
+      "/actions/talespire/in/TriggerValue": "How far a trigger is pulled (first-person fingers, without finger tracking)",
+      "/actions/talespire/in/GripValue": "How far a grip is squeezed (first-person fingers, without finger tracking)",
+      "/actions/talespire/in/ThumbRest": "Thumb resting on a button or stick (first-person thumbs, without finger tracking)",
+      "/actions/talespire/in/SkeletonLeft": "Left hand fingers (first-person hands)",
+      "/actions/talespire/in/SkeletonRight": "Right hand fingers (first-person hands)",
+      "/actions/talespire/out/Haptic": "Haptic pulse"
+    }
+  ]
+}
