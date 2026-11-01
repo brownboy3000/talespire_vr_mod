@@ -35,8 +35,8 @@ Copy-Item "$game\BepInEx\core\*" "$stage\BepInEx\core\" -Force
 # The README and licences, in the folder the settings will be written to.
 New-Item -ItemType Directory -Force "$stage\VRMod" | Out-Null
 Copy-Item "$vrmod\README.md" "$stage\VRMod\" -Force
-if (Test-Path "$vrmod\LICENSE") { Copy-Item "$vrmod\LICENSE" "$stage\VRMod\" -Force } else { Write-Warning "No VRMod\LICENSE yet" }
-if (Test-Path "$vrmod\licenses") { Copy-Item "$vrmod\licenses" "$stage\VRMod\" -Recurse -Force } else { Write-Warning "No VRMod\licenses folder yet (third-party licence texts)" }
+Copy-Item "$vrmod\LICENSE" "$stage\VRMod\" -Force
+Copy-Item "$vrmod\licenses" "$stage\VRMod\" -Recurse -Force
 
 # Everything that must be there.
 $required = @(
@@ -45,7 +45,8 @@ $required = @(
     "BepInEx\plugins\TaleSpireVR\sigil_disc.png", "BepInEx\plugins\TaleSpireVR\sigil_ring.png",
     "BepInEx\plugins\TaleSpireVR\SteamVR\actions.json", "BepInEx\plugins\TaleSpireVR\SteamVR\bindings_knuckles.json",
     "TaleSpire_Data\Plugins\x86_64\XRSDKOpenVR.dll", "TaleSpire_Data\Plugins\x86_64\openvr_api.dll",
-    "TaleSpire_Data\UnitySubsystems\XRSDKOpenVR\UnitySubsystemsManifest.json")
+    "TaleSpire_Data\UnitySubsystems\XRSDKOpenVR\UnitySubsystemsManifest.json",
+    "VRMod\README.md", "VRMod\LICENSE", "VRMod\licenses\README.txt", "VRMod\licenses\BepInEx-LICENSE.txt", "VRMod\licenses\UnityDoorstop-LICENSE.txt")
 foreach ($r in $required) { if (-not (Test-Path (Join-Path $stage $r))) { throw "Missing from the release: $r" } }
 
 # Nothing that must not be there: settings, symbols, logs, test output, and anything naming this machine.

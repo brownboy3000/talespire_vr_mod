@@ -4,7 +4,23 @@ A mod that makes [TaleSpire](https://store.steampowered.com/app/720620/TaleSpire
 
 [![Video of the mod's main features](https://img.youtube.com/vi/B212gN1KGME/hqdefault.jpg)](https://www.youtube.com/watch?v=B212gN1KGME)
 
-**[Watch the main features on YouTube](https://www.youtube.com/watch?v=B212gN1KGME)**
+**[Watch the main features on YouTube](https://www.youtube.com/watch?v=B212gN1KGME)** | **[Download the latest release](https://github.com/brownboy3000/talespire_vr_mod/releases/latest)** | [Source code](https://github.com/brownboy3000/talespire_vr_mod)
+
+## Credits
+- [**Universal Unity VR (UUVR)**](https://github.com/Raicuparta/uuvr) by Raicuparta (GPL-3.0): this mod started from UUVR's way of loading Unity's OpenVR plugin at runtime. `XRSDKOpenVR.dll`, `openvr_api.dll`, the subsystem manifest and `openvr_api.cs` were taken from it.
+- [**BepInEx**](https://github.com/BepInEx/BepInEx) (LGPL-2.1): the mod loader, included in the download with the libraries it ships with ([UnityDoorstop](https://github.com/NeighTools/UnityDoorstop), [HarmonyX](https://github.com/BepInEx/HarmonyX), [Harmony](https://github.com/pardeike/Harmony), [MonoMod](https://github.com/MonoMod/MonoMod), [Mono.Cecil](https://github.com/jbevain/cecil)).
+- **Valve:** the [OpenVR Unity XR plugin](https://github.com/ValveSoftware/unity-xr-plugin) and [OpenVR](https://github.com/ValveSoftware/openvr) (BSD-3-Clause), which the files above come from.
+- **3D models, textures and effects from the Unity Asset Store:**
+  - [Low Poly Weapons VOL.1](https://assetstore.unity.com/packages/3d/props/guns/low-poly-weapons-vol-1-151980) by Simon Mercuzot
+  - [FREE - Stylized Weapons](https://assetstore.unity.com/packages/3d/props/weapons/free-stylized-weapons-216047) and [FREE - RPG Weapons](https://assetstore.unity.com/packages/3d/props/weapons/free-rpg-weapons-199738) by Blink
+  - [Simple low poly melee weapon pack](https://assetstore.unity.com/packages/3d/props/guns/simple-low-poly-melee-weapon-pack-396222) by Donthrukat
+  - [FREE Low Poly Sci-Fi Weapons Demo](https://assetstore.unity.com/packages/3d/props/guns/free-low-poly-sci-fi-weapons-demo-sector-delta-cosmic-retro-377194) by The PolynestLab
+  - [Aged Medieval Weapons-Free](https://assetstore.unity.com/packages/3d/props/weapons/aged-medieval-weapons-free-207255) by Alvarolopz98
+  - [Low Poly ShotGun Weapon Pack 2](https://assetstore.unity.com/packages/3d/props/guns/low-poly-shotgun-weapon-pack-2-299660) by CASTLE BRAVO
+  - [Free Pack - VR Hands](https://assetstore.unity.com/packages/3d/props/free-pack-vr-hands-402280) by PolyOne Studio
+  - [FX Magic Plane II free](https://assetstore.unity.com/packages/vfx/particles/spells/fx-magic-plane-ii-free-25218) by FX_Kandol_Pack
+- **[TaleSpire](https://store.steampowered.com/app/720620/TaleSpire/)** by Bouncyrock Entertainment. You need your own copy; no TaleSpire files are included here.
+- Written with **[Claude Code](https://claude.ai/code)** by Anthropic.
 
 ## What it does
 - **The board on a table in front of you:** walk around it, zoom it, and use both controllers as laser pointers to move minis, build, measure, lasso and click TaleSpire's menus on floating panels.
@@ -15,12 +31,12 @@ A mod that makes [TaleSpire](https://store.steampowered.com/app/720620/TaleSpire
 - **Playing together:** nobody else needs the mod, and the mod sends nothing over the network itself. Everything others see goes through TaleSpire's own actions, and its rules for players, turns and hidden creatures are respected.
 - **A VR MODE button on the main menu** switches to normal TaleSpire and back at any time.
 
-All buttons are explained in [controls.txt](deploy/controls.txt) (installed next to `TaleSpire.exe`).
+All buttons are explained in [controls.txt](https://github.com/brownboy3000/talespire_vr_mod/blob/main/deploy/controls.txt) (installed next to `TaleSpire.exe`).
 
 ## Install
 You need Windows, TaleSpire on Steam, SteamVR and a PC VR headset.
 
-1. Download `TaleSpireVR-<version>.zip` from the [latest release](../../releases/latest).
+1. Download `TaleSpireVR-<version>.zip` from the [latest release](https://github.com/brownboy3000/talespire_vr_mod/releases/latest).
 2. In Steam, right-click TaleSpire > **Manage** > **Browse local files**. This opens the folder with `TaleSpire.exe` in it.
 3. Open the zip and drag everything inside it into that folder. If Windows asks about merging folders, say yes. No TaleSpire file is replaced.
 4. Start SteamVR, then start TaleSpire from Steam.
@@ -47,16 +63,8 @@ Default bindings are included for Valve Index, Meta Touch, Pico, Vive Focus 3, H
 ## What has and hasn't been tested
 It has been played on one PC with one headset and Valve Index controllers. The bindings for other controllers, and playing as a non-GM player in a real session with others, have had little or no real-world testing. A TaleSpire update can break the mod at any time; the VR MODE button or `VR = false` in `TaleSpireVR.Core.ini` puts you back in normal TaleSpire.
 
-## Credits
-- [**Universal Unity VR (UUVR)**](https://github.com/Raicuparta/uuvr) by Raicuparta (GPL-3.0): this mod started from UUVR's way of loading Unity's OpenVR plugin at runtime. `XRSDKOpenVR.dll`, `openvr_api.dll`, the subsystem manifest and `openvr_api.cs` were taken from it.
-- [**BepInEx**](https://github.com/BepInEx/BepInEx) (LGPL-2.1): the mod loader, included in the download with the libraries it ships with (HarmonyX, MonoMod, Mono.Cecil, UnityDoorstop).
-- **Valve**: the [OpenVR Unity XR plugin](https://github.com/ValveSoftware/unity-xr-plugin) (BSD-3-Clause) and [OpenVR](https://github.com/ValveSoftware/openvr), which the files above come from.
-- **Models and textures, from the Unity Asset Store:** "Low Poly Weapons VOL.1" (Simon Mercuzot); "FREE - Stylized Weapons" and "FREE - RPG Weapons" (Blink); "Simple low poly melee weapon pack" (Donthrukat); "FREE Low Poly Sci-Fi Weapons Demo" (The PolynestLab); "Aged Medieval Weapons - Free" (Alvarolopz98); "Low Poly ShotGun Weapon Pack 2" (CASTLE BRAVO); "Free Pack - VR Hands" (PolyOne Studio); "FX Magic Plane II free" (FXKandolPack).
-- **[TaleSpire](https://store.steampowered.com/app/720620/TaleSpire/)** by Bouncyrock Entertainment. You need your own copy; no TaleSpire files are included here.
-- Written with **[Claude Code](https://claude.ai/code)** by Anthropic.
-
 ## Licence
-The mod's own code is under the licence in [LICENSE](LICENSE). The third-party parts above keep their own licences.
+The mod's own code is free software under GPL-3.0 ([LICENSE](LICENSE)); its source code is at https://github.com/brownboy3000/talespire_vr_mod. The third-party libraries keep their own licences (texts and details in [licenses](licenses/README.txt)). The models, textures and effects are not under the GPL: they belong to their publishers, are used under the Unity Asset Store's licence and are included only as part of this mod, so please don't extract, reuse or share them separately.
 
 ---
 
